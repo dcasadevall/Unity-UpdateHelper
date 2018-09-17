@@ -1,0 +1,2 @@
+# Ignore meta files. This repo should only contain code
+*.meta
