@@ -10,7 +10,7 @@ Additionally, your code will be more testable, as you will no longer have a Mono
 
 # Usage
 
-  - Create an implementation of IUpdateHelper. This CAN be a Monobehaviour in your scene that uses its update loop to call IUpdateDelegate.Update() on an internal list of delegates.
+  - Create an implementation of IUpdateHelper. You can use the UpdateHelperMonobehaviour as a starting point. This implementation needs to be placed in your scene. It uses its update loop to call IUpdateDelegate.Update() on an internal list of delegates.
   - Provide your IUpdateHelper throughout the code, using any means of Dependency Injection.
   - Classes interested in having an update loop provided, can call IUpdateHelper.RegisterDelegate(this) on construction.
   - Classes using the update helper should call IUpdateHelper.UnregisterDelegate(this) when they are disposed (if following the IDisposable pattern) or no longer used.
